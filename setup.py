@@ -2,10 +2,9 @@
 from os.path import dirname, join
 from setuptools import setup, find_packages
 
-
 setup(
     name='msi-perkeyrgb',
-    version='2.1',
+    version='2.2',
     description='Configuration tool for per-key RGB keyboards on MSI laptops.',
     long_description=open(
         join(dirname(__file__), 'README.md')).read(),

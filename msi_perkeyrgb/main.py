@@ -8,9 +8,9 @@ from .parsing import parse_model, parse_usb_id, parse_preset, UnknownModelError,
 from .msi_keyboard import MSI_Keyboard
 from .hidapi_wrapping import HIDLibraryError, HIDNotFoundError, HIDOpenError
 
-VERSION = "2.1"
-DEFAULT_ID = "1038:1122"
-DEFAULT_MODEL = "GE63"  # Default laptop model if nothing specified
+VERSION = "2.2"
+DEFAULT_ID = "1038:113a"
+DEFAULT_MODEL = "GS66"  # Default laptop model if nothing specified
 
 
 def main():

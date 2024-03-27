@@ -16,7 +16,7 @@ For Ubuntu or others :
 ```
 git clone https://github.com/Askannz/msi-perkeyrgb
 cd msi-perkeyrgb/
-sudo python3 setup.py install
+python -m pip install .
 sudo cp 99-msi-rgb.rules /etc/udev/rules.d/
 ```
 
@@ -35,8 +35,8 @@ Compatibility
 
 This tool should probably work on any recent MSI laptop with a per-key RGB keyboard. It was tested with the following models :
 
-| Model | Basic color support 
-| ----  | ------------------- 
+| Model | Basic color support
+| ----  | -------------------
 | GE63  | Yes
 | GE73  | Yes
 | GE75  | Yes
@@ -46,6 +46,7 @@ This tool should probably work on any recent MSI laptop with a per-key RGB keybo
 | GS75  | Yes
 | GT63  | Yes
 | GT75  | Yes
+| GS66  | Yes
 
 If you have some additional test results, feel free to open a GitHub issue to help expand this list !
 

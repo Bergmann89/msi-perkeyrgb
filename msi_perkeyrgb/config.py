@@ -2,7 +2,7 @@ import re
 import sys
 
 ALIAS_ALL = "all"
-ALIASES = {ALIAS_ALL: "9-133,fn",
+ALIASES = {ALIAS_ALL: "9-133,fn,power",
            "f_row": "67-76,95,96",
            "arrows": "111,113,114,116",
            "num_row": "10-21",
@@ -116,6 +116,8 @@ def parse_keycodes(msi_keymap, keys_parameter):
         # Parsing
         if re.fullmatch("^fn$", key_str):  # Special keycode "fn"
             keycodes.append("fn")
+        elif re.fullmatch("^power$", key_str):  # Special keycode "power"
+            keycodes.append("power")
         elif re.fullmatch("^[0-9]+$", key_str):  # Single keycode
             keycode = int(key_str)
             if keycode not in msi_keymap.keys():
@@ -137,8 +139,7 @@ def parse_keycodes(msi_keymap, keys_parameter):
 
 # This is a stub because there is only one mode for now. Will be modified in future versions.
 def parse_mode(mode_parameter):
-
-    if mode_parameter != "steady":
+    if mode_parameter not in ["steady", "fade-of"]:
         raise LineParseError("Unknown mode %s" % mode_parameter)
 
 
